@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', () => { //wait for page to load
         anime({
           targets: tile,
           filter: 'brightness(0.88)', //darken tile to 88% brightness
-          duration: 30,
-          easing: 'easeInQuad' //ease in
+          duration: 80,
+          easing: 'easeOutQuad' //ease out
         });
       });
       tile.addEventListener('mouseleave', () => { //when mouse leaves tile
         anime({
           targets: tile,
           filter: 'brightness(1)', //return tile to 100% brightness
-          duration: 170,
-          easing: 'easeOutQuad' //ease out
+          duration: 250,
+          easing: 'easeInQuad' //ease in
         });
       });
     });
