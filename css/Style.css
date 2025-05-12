@@ -50,6 +50,28 @@ a {
   text-decoration: none;
 }
 
+/* Definition box styles for clarity */
+.definition-box {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 24px 0 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-size: 16px;
+  max-width: 350px;
+}
+.definition-box strong {
+  display: block;
+  margin-bottom: 6px;
+}
+.definition-box p {
+  opacity: 1;
+  transition: opacity 0.2s;
+  margin: 0;
+  color: #333;
+}
+
 /* Added styles for main content layout and right panel */
 .main-content {
   display: flex;
