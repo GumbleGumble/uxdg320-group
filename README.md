@@ -19,18 +19,30 @@ MoodShop is a web-based interactive prototype that helps users identify and refl
   - MoodShop logo navigates back to the Home Page for smooth interaction.
 
 ## Folder Structure
-Final Project/
+UXDG320-FinalProject/
 ├── Home Page/
-│   ├── Home.html
+│   ├── assets/             
+│   ├── Home.html           
 │   ├── Style.css
-│   └── assets/
-│       └── [emotions, mascot images]
+│   └── script.js
 ├── Mood Booth/
+│   ├── assets/
 │   ├── Angry.html
+│   ├── Happy.html
 │   ├── Sad.html
-│   └── [Other emotions].html
-├── script.js
-
+│   ├── Calm.html
+│   ├── Anxious.html
+│   └── Style.css
+├── Mood Journal/
+│   ├── assets/
+│   ├── Angry.html
+│   ├── Happy.html
+│   ├── Sad.html
+│   ├── Calm.html
+│   ├── Anxious.html
+│   ├── style.css
+│   ├── script.js
+│   └── styles.css
 
 ## 📌 To Do (Next Steps)
 
