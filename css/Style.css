@@ -19,6 +19,24 @@
     padding: 20px;
    
   }
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+  
+  .logo {
+    margin-bottom: 8px;
+  }
+  
+  .main-heading {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+  }
   
   .tile {
     width: 152px;
@@ -55,9 +73,10 @@ a {
 /* This class creates the main horizontal layout: mood cards on the left, mascot + definition on the right */
 .main-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   padding: 40px 80px;
+  gap: 160px;
 }
 
 /* This grid arranges mood cards in 2 columns and 3 rows */
@@ -69,9 +88,11 @@ a {
     "angry happy"
     "sad calm"
     "anxious anxious"; /* anxious spans two columns */
-  gap: 20px;
+  gap: 16px;
   justify-items: center;
   justify-content: center;
+  margin-left: 40px; /* shift mood grid to the right */
+  margin-top: 50px;
 }
 
 .tile.angry { grid-area: angry; }
@@ -80,11 +101,42 @@ a {
 .tile.calm { grid-area: calm; }
 .tile.anxious { grid-area: anxious; }
 
+/* Custom angry tile background and border accent */
+.tile.angry {
+  background-color: var(--tile-color); /* keep base color system */
+  border: 1px solid #252525; /* slightly stronger red accent */
+}
+
+/* Custom anxious tile background and border accent */
+.tile.anxious {
+  background-color: var(--tile-color); /* maintain system-defined color */
+  border: 1px solid #252525; /* soft blue-gray tone for anxious state */
+}
+
+/* Custom happy tile (keep same border for unified stroke style) */
+.tile.happy {
+  background-color: var(--tile-color);
+  border: 1px solid #252525;
+}
+
+/* Custom sad tile */
+.tile.sad {
+  background-color: var(--tile-color);
+  border: 1px solid #252525;
+}
+
+/* Custom calm tile */
+.tile.calm {
+  background-color: var(--tile-color);
+  border: 1px solid #252525;
+}
+
+/* This allows visual distinction per mood while keeping layout shared. */
 /* Right side container for presenter and definition box */
 .right-panel {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Right-align the content to look close to the bubble */
+  align-items: flex-start; /* changed from flex-end to allow left alignment */
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
@@ -96,9 +148,13 @@ a {
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 16px;
-  margin-bottom: 20px;
+  max-width: 240px;
+  margin-bottom: 10px;
   position: relative;
-  transform: translate(10px, -10px);
+  transform: translate(-60px, -20px); /* 控制气泡的位置：
+     - 第一个值控制左右（更负 = 向左）
+     - 第二个值控制上下（更负 = 向上） */
+  align-self: flex-end; /* 控制气泡在容器内靠左（也可以尝试 flex-end 居右） */
 }
 
 .speech-bubble::after {
@@ -115,25 +171,24 @@ a {
 .mascot-image {
   height: 270px;
   width: auto;
+  margin-top: -20px; /* control presneter：
+     - - = up move
+     - + = down move */
 }
 
 .definition-box {
-  margin-top: 20px;
-  max-width: 280px;
+  position: relative;
+  margin-top: 10px; /* move closer to mascot's foot */
+  left: -100px; /* shift box left to align under mascot */
+  max-width: 300px; /* increase width to match design reference */
   background-color: #F3F3F3;
   padding: 15px 20px;
   border-radius: 10px;
   border: 2px solid #ccc;
-  font-size: 14px;
+  font-size: 16px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.speech-bubble {
-  max-width: 240px;
-  font-size: 16px;
-  margin-bottom: 10px;
-  align-self: flex-end; /* ensure mascot at right up corner */
-}
 .definition-box strong {
   display: block;
   margin-bottom: 6px;
