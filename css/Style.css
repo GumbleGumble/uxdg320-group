@@ -7,6 +7,7 @@
   body {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    background-color: #FEFBEF;
   }
   
   .container {
@@ -16,7 +17,7 @@
     align-items: center;
     height: 100vh;
     padding: 20px;
-    background-color: #FEFBEF;
+   
   }
   
   .tile {
@@ -51,6 +52,7 @@ a {
 }
 
 /* Added styles for main content layout and right panel */
+/* This class creates the main horizontal layout: mood cards on the left, mascot + definition on the right */
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -58,14 +60,15 @@ a {
   padding: 40px 80px;
 }
 
+/* This grid arranges mood cards in 2 columns and 3 rows */
 .mood-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* two equal-width columns */
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "angry happy"
     "sad calm"
-    "anxious anxious";
+    "anxious anxious"; /* anxious spans two columns */
   gap: 20px;
   justify-items: center;
   justify-content: center;
@@ -77,11 +80,14 @@ a {
 .tile.calm { grid-area: calm; }
 .tile.anxious { grid-area: anxious; }
 
+/* Right side container for presenter and definition box */
 .right-panel {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 300px;
+  align-items: flex-end; /* Right-align the content to look close to the bubble */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .speech-bubble {
@@ -92,6 +98,7 @@ a {
   font-size: 16px;
   margin-bottom: 20px;
   position: relative;
+  transform: translate(10px, -10px);
 }
 
 .speech-bubble::after {
@@ -108,17 +115,24 @@ a {
 .mascot-image {
   height: 270px;
   width: auto;
-  margin-bottom: 20px;
 }
 
 .definition-box {
+  margin-top: 20px;
+  max-width: 280px;
   background-color: #F3F3F3;
   padding: 15px 20px;
   border-radius: 10px;
   border: 2px solid #ccc;
   font-size: 14px;
-  max-width: 260px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.speech-bubble {
+  max-width: 240px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  align-self: flex-end; /* ensure mascot at right up corner */
 }
 .definition-box strong {
   display: block;
