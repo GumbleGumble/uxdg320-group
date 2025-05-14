@@ -1,0 +1,96 @@
+/* Ensure no default margins interfere and allow full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Full page background wrapper with padding */
+.page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../../assets/other/Blackboard.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Optional for parallax effect */
+  padding: 40px;
+  box-sizing: border-box;
+}
+  
+  /* Header layout with back arrow and logo spaced apart */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Main content area: 3 parts horizontally (definition, emotion, mascot) */
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  /* Left side definition box styling */
+  .definition-box {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border: 2px solid #666;
+    border-radius: 12px;
+    width: 220px;
+  }
+  
+  /* Middle section: emotion label, icon, prompt, and button */
+  .emotion-content {
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Prompt-style speech bubble */
+  .speech-bubble {
+    background-color: #222;
+    color: white;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    position: relative;
+    font-size: 14px;
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    right: 24px;
+    top: 100%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #222 transparent transparent transparent;
+  }
+  
+  /* Button for journaling reflection */
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 24px;
+    font-weight: 600;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Right-aligned mascot container */
+  .mascot-box {
+    width: 200px;
+  }
+  
+  /* Mascot image inside right box */
+  .mascot-image {
+    width: 100%;
+  }
