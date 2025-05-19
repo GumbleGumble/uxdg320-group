@@ -175,6 +175,7 @@ a {
   margin-top: 10px; /* control presneter：
      - - = up move
      - + = down move */
+  transition: opacity 0.3s ease;
 }
 
 .definition-box {
@@ -239,4 +240,8 @@ a {
 
 .subcategory-grid .tile a:hover {
   text-decoration: underline;
+}
+
+.hidden {
+  display: none !important;
 }

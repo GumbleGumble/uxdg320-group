@@ -54,6 +54,7 @@
             </a>
         </div>
         <div class="right-panel">
+            <button onclick="togglePresenter()">Toggle Presenter</button>
             <div class="mascot-section">
                 <div class="speech-bubble">Hey, how are you feeling today?</div>
                 <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
@@ -66,6 +67,13 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/hover-script.js"></script>
+    <script>
+        function togglePresenter() {
+          const mascot = document.querySelector('.mascot-section');
+          mascot.classList.toggle('hidden');
+        }
+      </script>
+
 </body>
 
 </html>
