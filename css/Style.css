@@ -140,6 +140,7 @@ a {
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
+  margin-left: -40px;
 }
 
 .speech-bubble {
@@ -171,7 +172,7 @@ a {
 .mascot-image {
   height: 270px;
   width: auto;
-  margin-top: -20px; /* control presneter：
+  margin-top: 10px; /* control presneter：
      - - = up move
      - + = down move */
 }
@@ -179,7 +180,7 @@ a {
 .definition-box {
   position: relative;
   margin-top: 10px; /* move closer to mascot's foot */
-  left: -100px; /* shift box left to align under mascot */
+  left: -60px; /* shift box left to align under mascot */
   max-width: 300px; /* increase width to match design reference */
   background-color: #F3F3F3;
   padding: 15px 20px;
