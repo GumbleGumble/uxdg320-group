@@ -4,17 +4,17 @@ MoodShop is a web-based interactive prototype that helps users identify and refl
 
  **Current Features:**
 
-  - Mood Selection Home Page**
+  - Mood Selection Home Page
   - Users can select from 5 primary emotions: Angry, Happy, Sad, Anxious, and Calm.
   - Each mood card links to a dedicated Mood Booth page.
   
-- **Emotion Definition Panel**
+ **Emotion Definition Panel**
   - Hover or select a mood to reveal a brief definition on the right panel.
 
-- **Mascot Interaction**
+ **Mascot Interaction**
   - A friendly visual guide offers prompts to support users’ self-awareness.
 
-- **Page Navigation**
+ **Page Navigation**
   - All mood cards are linked to their corresponding detail pages.
   - MoodShop logo navigates back to the Home Page for smooth interaction.
 
