@@ -15,7 +15,10 @@
     <div class="page-wrapper">
         <header class="header-flex">
             <a href="../../index.html" class="back-arrow">←</a>
-          </header>
+            <button id="togglePresenterBtn" aria-label="Toggle Presenter" style="background: none; border: none; cursor: pointer;">
+                <img src="../../assets/other/eye.svg" alt="Toggle Presenter" style="height: 24px;">
+            </button>
+        </header>
     <div class="main-content">
         <div class="mood-grid">
             <a href="../single-emotion.html">
@@ -48,8 +51,19 @@
             </div>
         </div>
     </div>
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../js/hover-script.js"></script>
+    <script>
+      const toggleBtn = document.getElementById("togglePresenterBtn");
+      const mascotImage = document.querySelector(".mascot-image");
+      const speechBubble = document.querySelector(".speech-bubble");
+
+      toggleBtn.addEventListener("click", () => {
+        mascotImage.style.display = mascotImage.style.display === "none" ? "block" : "none";
+        speechBubble.style.display = speechBubble.style.display === "none" ? "block" : "none";
+      });
+    </script>
 </body>
 
 </html>

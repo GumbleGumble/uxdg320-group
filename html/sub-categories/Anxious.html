@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodshop - Sad</title>
+    <title>Moodshop - Angry</title>
     <!-- Pull from Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/Style.css">
@@ -15,37 +15,42 @@
     <div class="page-wrapper">
         <header class="header-flex">
             <a href="../../index.html" class="back-arrow">←</a>
-          </header>
+        </header>
     <div class="main-content">
         <div class="mood-grid">
             <a href="../single-emotion.html">
-                <div class="tile nervous" style="--tile-color: #C1BFCF;"
-                    data-definition="Unsettled feeling, often accompanied by worry.">
-                    <div class="icon"><img src="../../assets/emotions/Nervous.png" alt="Nervous" height="85"
+                <div class="tile mad" style="--tile-color: #E07B7B;"
+                    data-definition="Feeling or showing strong annoyance or displeasure.">
+                    <div class="icon"><img src="../../assets/emotions/Mad.png" alt="Mad" height="85"
                             style="width:auto;"></div>
-                    <div class="label">Nervous</div>
+                    <div class="label">Mad</div>
                 </div>
             </a>
             <a href="../single-emotion.html">
-                <div class="tile worried" style="--tile-color: #D9C3A1;"
-                    data-definition="Concern or unease about a potential threat.">
-                    <div class="icon"><img src="../../assets/emotions/Worried.png" alt="Worried" height="85"
+                <div class="tile frustrated" style="--tile-color: #D99A9A;"
+                    data-definition="Feeling upset or annoyed due to inability to change or achieve something.">
+                    <div class="icon"><img src="../../assets/emotions/Frustrated.png" alt="Frustrated" height="85"
                             style="width:auto;"></div>
-                    <div class="label">Worried</div>
+                    <div class="label">Frustrated</div>
                 </div>
             </a>
             <a href="../single-emotion.html">
-                <div class="tile insecure" style="--tile-color: #D5BDAF;"
-                    data-definition="Doubt about your worth or abilities.">
-                    <div class="icon"><img src="../../assets/emotions/Insecure.png" alt="Insecure" height="85"
+                <div class="tile annoyed" style="--tile-color: #D6A3A3;"
+                    data-definition="Slightly angry or irritated.">
+                    <div class="icon"><img src="../../assets/emotions/Annoyed.png" alt="Annoyed" height="85"
                             style="width:auto;"></div>
-                    <div class="label">Insecure</div>
+                    <div class="label">Annoyed</div>
                 </div>
             </a>
         </div>
         <div class="right-panel">
             <div class="mascot-section">
-                <div class="speech-bubble">Let's try to get a little bit more specific</div>
+                <div class="speech-bubble">
+                    Feeling a bit heated? Let's explore these emotions.
+                    <button id="togglePresenterBtn" aria-label="Toggle Presenter" style="background:none; border:none; cursor:pointer; position:absolute; top:8px; right:8px;">
+                      <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" style="height: 20px; width: 20px;">
+                    </button>
+                </div>
                 <img src="../../assets/other/presenter.png" alt="Mascot" class="mascot-image" />
             </div>
             <div class="definition-box" id="definition-box">
@@ -54,8 +59,17 @@
             </div>
         </div>
     </div>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../js/hover-script.js"></script>
+    <script>
+      const toggleBtn = document.getElementById("togglePresenterBtn");
+      const mascotImage = document.querySelector(".mascot-image");
+
+      toggleBtn.addEventListener("click", () => {
+        mascotImage.style.display = mascotImage.style.display === "none" ? "block" : "none";
+      });
+    </script>
 </body>
 
 </html>
