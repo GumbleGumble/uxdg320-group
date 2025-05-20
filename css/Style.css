@@ -244,3 +244,50 @@ a {
 .hidden {
   display: none !important;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .mood-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "angry"
+      "happy"
+      "sad"
+      "calm"
+      "anxious";
+    margin-left: 0;
+  }
+
+  .tile {
+    width: 200px;
+    height: 140px;
+  }
+
+  .right-panel {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .subcategory-grid {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    justify-items: center;
+  }
+
+  .speech-bubble {
+    align-self: center;
+    transform: translate(0, -10px);
+  }
+
+  .definition-box {
+    left: 0;
+    text-align: center;
+  }
+}

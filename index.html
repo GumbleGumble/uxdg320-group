@@ -9,12 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="icon" type="image/png" href="assets/other/favicon.png">
+    <style>
+      .visually-hidden {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+    </style>
 </head>
 
 <body>
-    <div class="main-content">
+    <h1 class="visually-hidden">Moodshop Home</h1>
+    <main class="main-content">
         <div class="mood-grid">
-            <a href="html/sub-categories/Angry.html">
+            <a href="html/sub-categories/Angry.html" aria-label="Go to Angry category">
                 <div class="tile" style="--tile-color: #ffb3ba;"
                     data-definition="A strong feeling of displeasure or hostility.">
                     <div class="icon"><img src="assets/emotions/Angry.png" alt="Angry">
@@ -22,7 +32,7 @@
                     <div class="label">Angry</div>
                 </div>
             </a>
-            <a href="html/sub-categories/Happy.html">
+            <a href="html/sub-categories/Happy.html" aria-label="Go to Happy category">
                 <div class="tile" style="--tile-color: #ffdfba;"
                     data-definition="A feeling of joy, pleasure, or good fortune.">
                     <div class="icon"><img src="assets/emotions/Happy.png" alt="Happy">
@@ -30,21 +40,21 @@
                     <div class="label">Happy</div>
                 </div>
             </a>
-            <a href="html/sub-categories/Sad.html">
+            <a href="html/sub-categories/Sad.html" aria-label="Go to Sad category">
                 <div class="tile" style="--tile-color: #aec6cf;" data-definition="A feeling of sorrow or unhappiness.">
                     <div class="icon"><img src="assets/emotions/Sad.png" alt="Sad">
                     </div>
                     <div class="label">Sad</div>
                 </div>
             </a>
-            <a href="html/sub-categories/Anxious.html">
+            <a href="html/sub-categories/Anxious.html" aria-label="Go to Anxious category">
                 <div class="tile" style="--tile-color: #fff5ba;"
                     data-definition="Uneasy tension about potential threats or uncertainty.">
                     <div class="icon"><img src="assets/emotions/Anxiety.png" alt="Anxious"></div>
                     <div class="label">Anxious</div>
                 </div>
             </a>
-            <a href="html/sub-categories/Calm.html">
+            <a href="html/sub-categories/Calm.html" aria-label="Go to Calm category">
                 <div class="tile" style="--tile-color: #b5ead7;"
                     data-definition="A peaceful and relaxed state of mind.">
                     <div class="icon"><img src="assets/emotions/Calm.png" alt="Calm">
@@ -54,7 +64,7 @@
             </a>
         </div>
         <div class="right-panel">
-            <button onclick="togglePresenter()">Toggle Presenter</button>
+            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn">Toggle Presenter</button>
             <div class="mascot-section">
                 <div class="speech-bubble">Hey, how are you feeling today?</div>
                 <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
@@ -64,13 +74,15 @@
                 <p id="definition-text">Hover over an emotion to see definition</p>
             </div>
         </div>
-    </div>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/hover-script.js"></script>
     <script>
         function togglePresenter() {
           const mascot = document.querySelector('.mascot-section');
+          const btn = document.getElementById('toggleBtn');
           mascot.classList.toggle('hidden');
+          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
         }
       </script>
 
