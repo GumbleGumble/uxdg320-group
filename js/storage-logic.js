@@ -33,7 +33,11 @@ function setupEmotionSelection() {
 // - Displays the selected emotion on the single-emotion page -
 function displaySelectedEmotion() {
   const emotionData = JSON.parse(sessionStorage.getItem("selectedEmotion")); // Get the emotion data from session storage, parse it from JSON
-  if (!emotionData) return; // Keep defaults if no emotion selected to prevent errors
+  if (!emotionData) {
+    document.getElementById("emotion-label").textContent = "No emotion selected";
+    document.getElementById("definition-text").textContent = "Please return to the category page and select an emotion.";
+    return;
+  }
   // - Update page elements -
   document.getElementById("emotion-label").textContent = emotionData.name;
   document.getElementById("definition-text").textContent = emotionData.definition;
@@ -45,6 +49,15 @@ function displaySelectedEmotion() {
     emotionImg.src = emotionData.imageSrc;
     emotionImg.alt = emotionData.name; // Uses emotion name as alt text
     // TODO: This is very lazy alt text, need to come up more descriptive system or manually write alt text for each emotion
+    const altTextMap = {
+      Angry: "An angry face with furrowed brows",
+      Sad: "A sad expression with downcast eyes",
+      Happy: "A joyful smile with raised cheeks",
+      Calm: "A peaceful expression with relaxed features",
+      Anxious: "A worried face with furrowed brow",
+      // Add more as needed
+    };
+    emotionImg.alt = altTextMap[emotionData.name] || emotionData.name;
   }
   document.title = `MoodShop - ${emotionData.name}`; // Update page title
 }
@@ -56,6 +69,21 @@ function setupJournalPage() {
   const journalTextarea = document.querySelector("textarea");
   if (journalTextarea) {
     journalTextarea.placeholder = emotionData.journalPrompt; // Update journal prompt
+
+    const saveBtn = document.getElementById("save-journal");
+    if (saveBtn && journalTextarea) {
+      // Load saved journal
+      const savedEntry = localStorage.getItem(`journal-${emotionData.name}`);
+      if (savedEntry) {
+        journalTextarea.value = savedEntry;
+      }
+
+      // Save journal on button click
+      saveBtn.addEventListener("click", () => {
+        localStorage.setItem(`journal-${emotionData.name}`, journalTextarea.value);
+        alert("Journal saved locally.");
+      });
+    }
   }
 
   // Set current date for journal entry from today's date
