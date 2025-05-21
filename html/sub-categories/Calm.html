@@ -18,6 +18,46 @@
                 <a href="javascript:history.back()" class="back-arrow">
                   <img src="../../assets/other/Back Arrow.png" alt="Back" width="15" height="15" />
                 </a>
+                <style>
+                    @media (max-width: 768px) {
+                      .main-content {
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 20px;
+                        gap: 40px;
+                      }
+                
+                      .mood-grid {
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                          "Disappointed"
+                          "Lonely"
+                          "Sad";
+                        margin-left: 0;
+                        justify-items: center;
+                      }
+                
+                      .tile {
+                        width: 90%;
+                      }
+                
+                      .right-panel {
+                        align-items: center;
+                        margin-top: 30px;
+                      }
+                
+                      .speech-bubble {
+                        transform: none;
+                        text-align: center;
+                      }
+                
+                      .definition-box {
+                        left: 0;
+                        max-width: 90%;
+                        text-align: center;
+                      }
+                    }
+                    </style>
           </header>
     <div class="main-content">
         <div class="mood-grid">
