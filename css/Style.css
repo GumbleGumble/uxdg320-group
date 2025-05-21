@@ -154,22 +154,7 @@ a {
   transform: translate(-60px, -20px); /* 控制气泡的位置：
      - 第一个值控制左右（更负 = 向左）
      - 第二个值控制上下（更负 = 向上） */
-  align-self: flex-end;
-}
-
-/* Eye icon button inside speech bubble */
-.speech-bubble button {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.speech-bubble button img {
-  width: 20px;
-  height: 20px;
+  align-self: flex-end; /* 控制气泡在容器内靠左（也可以尝试 flex-end 居右） */
 }
 
 .speech-bubble::after {
