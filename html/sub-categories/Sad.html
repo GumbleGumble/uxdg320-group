@@ -47,6 +47,9 @@
             </a>
         </div>
         <div class="right-panel">
+            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
+                <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+              </button>
             <div class="mascot-section">
                 <div class="speech-bubble">Let's try to get a little bit more specific</div>
                 <img src="../../assets/other/presenter.png" alt="Mascot" class="mascot-image" />
@@ -60,6 +63,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../js/hover-script.js"></script>
     <script src="../../js/storage-logic.js"></script>
+    <script>
+        function togglePresenter() {
+          const mascot = document.querySelector('.mascot-section');
+          const btn = document.getElementById('toggleBtn');
+          mascot.classList.toggle('hidden');
+          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
+        }
+      </script>
 </body>
 
 </html>

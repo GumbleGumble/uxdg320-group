@@ -44,14 +44,12 @@
             </a>
         </div>
         <div class="right-panel">
-            <div style="position: relative;">
-                <button id="togglePresenterBtn" aria-label="Toggle Presenter" style="background: none; border: none; padding: 0; cursor: pointer; position: absolute; top: -20px; right: 0;">
-                    <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" style="height: 24px; width: 24px;">
-                </button>
-                <div class="mascot-section">
-                    <div class="speech-bubble">Let's try to get a little bit more specific</div>
-                    <img src="../../assets/other/presenter.png" alt="Mascot" class="mascot-image" />
-                </div>
+            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
+                <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+              </button>
+            <div class="mascot-section">
+                <div class="speech-bubble">Let's try to get a little bit more specific</div>
+                <img src="../../assets/other/presenter.png" alt="Mascot" class="mascot-image" />
             </div>
             <div class="definition-box" id="definition-box">
                 <strong>Definition</strong>
@@ -59,23 +57,17 @@
             </div>
         </div>
     </div>
-</body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../js/hover-script.js"></script>
+    <script src="../../js/storage-logic.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const toggleBtn = document.getElementById('togglePresenterBtn');
-        const mascotImg = document.querySelector('.mascot-image');
-
-        toggleBtn.addEventListener('click', function () {
-          if (mascotImg.style.display === 'none') {
-            mascotImg.style.display = 'block';
-          } else {
-            mascotImg.style.display = 'none';
-          }
-        });
-      });
-    </script>
+        function togglePresenter() {
+          const mascot = document.querySelector('.mascot-section');
+          const btn = document.getElementById('toggleBtn');
+          mascot.classList.toggle('hidden');
+          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
+        }
+      </script>
 </body>
 
 </html>

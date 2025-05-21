@@ -44,13 +44,11 @@
             </a>
         </div>
         <div class="right-panel">
+            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
+                <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+              </button>
             <div class="mascot-section">
-                <div class="speech-bubble">
-                    Feeling a bit heated? Let's explore these emotions.
-                    <button id="togglePresenterBtn" aria-label="Toggle Presenter" style="background:none; border:none; cursor:pointer; position:absolute; top:8px; right:8px;">
-                      <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" style="height: 20px; width: 20px;">
-                    </button>
-                </div>
+                <div class="speech-bubble">Let's try to get a little bit more specific</div>
                 <img src="../../assets/other/presenter.png" alt="Mascot" class="mascot-image" />
             </div>
             <div class="definition-box" id="definition-box">
@@ -59,17 +57,17 @@
             </div>
         </div>
     </div>
-</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../../js/hover-script.js"></script>
+    <script src="../../js/storage-logic.js"></script>
     <script>
-      const toggleBtn = document.getElementById("togglePresenterBtn");
-      const mascotImage = document.querySelector(".mascot-image");
-
-      toggleBtn.addEventListener("click", () => {
-        mascotImage.style.display = mascotImage.style.display === "none" ? "block" : "none";
-      });
-    </script>
+        function togglePresenter() {
+          const mascot = document.querySelector('.mascot-section');
+          const btn = document.getElementById('toggleBtn');
+          mascot.classList.toggle('hidden');
+          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
+        }
+      </script>
 </body>
 
 </html>
