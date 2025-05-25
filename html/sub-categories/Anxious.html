@@ -9,54 +9,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/Style.css">
     <link rel="icon" type="image/png" href="../../assets/other/favicon.png">
-    <style>
-        @media (max-width: 768px) {
-          .main-content {
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            gap: 40px;
-          }
-    
-          .mood-grid {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-              "Mad"
-              "frustrated"
-              "annoyed";
-            margin-left: 0;
-            justify-items: center;
-          }
-    
-          .tile {
-            width: 90%;
-          }
-    
-          .right-panel {
-            align-items: center;
-            margin-top: 30px;
-          }
-    
-          .speech-bubble {
-            transform: none;
-            text-align: center;
-          }
-    
-          .definition-box {
-            left: 0;
-            max-width: 90%;
-            text-align: center;
-          }
-        }
-        </style>
+     <style>
+                    @media (max-width: 768px) {
+                      .main-content {
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 20px;
+                        gap: 40px;
+                      }
+                
+                      .mood-grid {
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                          "Disappointed"
+                          "Lonely"
+                          "Sad";
+                        margin-left: 0;
+                        justify-items: center;
+                      }
+                
+                      .tile {
+                        width: 90%;
+                      }
+                
+                      .right-panel {
+                        align-items: center;
+                        margin-top: 30px;
+                      }
+                
+                      .speech-bubble {
+                        transform: none;
+                        text-align: center;
+                      }
+                
+                      .definition-box {
+                        left: 0;
+                        max-width: 90%;
+                        text-align: center;
+                      }
+                    }
+                    </style>
 </head>
 
 <body>
-    <div class="page-wrapper">
-              <a href="javascript:history.back()" class="back-arrow">
-                <img src="../../assets/other/Back Arrow.png" alt="Back" width="15" height="15" />
-              </a>
-            </div>
+     <div class="page-wrapper">
+        <header class="header-flex">
+            <div class="nav-wrapper" style="display: flex; align-items: center; gap: 12px; padding: 16px;">
+                <a href="javascript:history.back()" class="back-arrow">
+                  <img src="../../assets/other/Back Arrow.png" alt="Back" width="15" height="15" />
+                </a>
+                
           </header>
     <div class="main-content">
         <div class="mood-grid">
