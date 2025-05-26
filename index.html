@@ -17,6 +17,51 @@
         height: 1px;
         overflow: hidden;
       }
+      @media (max-width: 600px) {
+        .main-content {
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+
+        .mood-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+          justify-items: center;
+        }
+
+        .tile {
+          width: 140px;
+          height: 140px;
+        }
+
+        .right-panel {
+          align-items: center;
+          text-align: center;
+        }
+
+        .speech-bubble {
+          font-size: 14px;
+          max-width: 90%;
+        }
+
+        .definition-box {
+          width: 80%;
+          font-size: 14px;
+          margin: 0 auto;
+        }
+
+        .mascot-image {
+          height: 180px;
+        }
+
+        .header-flex .nav-wrapper {
+          flex-direction: row;
+          align-items: center;
+          gap: 12px;
+        }
+      }
     </style>
 </head>
 
