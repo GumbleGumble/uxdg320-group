@@ -19,51 +19,53 @@
       }
       @media (max-width: 600px) {
         .main-content {
-          flex-direction: column;
-          align-items: center;
-          gap: 24px;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
         }
 
         .right-panel {
           display: flex;
-          flex-direction: row;
-          justify-content: space-between;
+          flex-direction: column;
           align-items: center;
+          order: 2;
           width: 100%;
-          padding: 0 16px;
         }
 
         .mascot-section {
+          order: 1;
           display: flex;
           flex-direction: column;
           align-items: center;
         }
 
-        .definition-box {
-          width: 60%;
+        .speech-bubble {
+          order: 2;
+          margin: 10px 0;
           font-size: 14px;
-          margin: 0;
+          max-width: 90%;
+        }
+
+        .definition-box {
+          order: 3;
+          width: 80%;
+          font-size: 14px;
+          margin: 0 auto;
         }
 
         .mood-grid {
+          order: 4;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 12px;
           justify-items: center;
+          width: 100%;
         }
 
         .tile {
           width: 140px;
           height: 140px;
-        }
-
-        .speech-bubble {
-          font-size: 14px;
-          max-width: 90%;
-        }
-
-        .mascot-image {
-          height: 180px;
         }
 
         .header-flex .nav-wrapper {
@@ -88,19 +90,6 @@
     </header>
     <h1 class="visually-hidden">Moodshop Home</h1>
     <main class="main-content">
-        <div class="right-panel">
-            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
-              <img src="assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
-            </button>
-            <div class="mascot-section">
-                <div class="speech-bubble">Hey, how are you feeling today?</div>
-                <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
-            </div>
-            <div class="definition-box" id="definition-box">
-                <strong>Definition</strong>
-                <p id="definition-text">Hover over an emotion to see definition</p>
-            </div>
-        </div>
         <div class="mood-grid">
             <a href="html/sub-categories/Angry.html" aria-label="Go to Angry category">
                 <div class="tile" style="--tile-color: #ffb3ba;"
@@ -140,6 +129,19 @@
                     <div class="label">Calm</div>
                 </div>
             </a>
+        </div>
+        <div class="right-panel">
+            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
+              <img src="assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+            </button>
+            <div class="mascot-section">
+                <div class="speech-bubble">Hey, how are you feeling today?</div>
+                <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
+            </div>
+            <div class="definition-box" id="definition-box">
+                <strong>Definition</strong>
+                <p id="definition-text">Hover over an emotion to see definition</p>
+            </div>
         </div>
     </main>
  </div>
