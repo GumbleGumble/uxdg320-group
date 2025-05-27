@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journal Entry</title>
+  <title>MoodLog - Journal Entry</title>
   <link rel="stylesheet" href="../css/journal.css">
+  <link rel="icon" type="image/png" href="../assets/other/favicon.png">
 </head>
 <body>
   <div class="page-wrapper">
     <!-- Header with logo and back arrow -->
     <header class="header-flex">
-      <div class="nav-wrapper" style="display: flex; align-items: center; gap: 12px; padding: 16px;">
-          <a href="javascript:history.back()" class="back-arrow">
-            <img src="../../assets/other/Back Arrow.png" alt="Back" width="15" height="15" />
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="../../index.html">
+            <img src="../../assets/other/logo.svg" alt="MoodLog Logo"/>
           </a>
+        </div>
+        <a href="javascript:history.back()" class="back-arrow">
+          <img src="../../assets/other/arrow-left.svg" alt="Back Arrow" />
+        </a>
+      </div>
     </header>
     <!-- Main content area -->
     <div class="main-content">
@@ -21,10 +28,8 @@
       <div class="left-column">
         <label for="journal-date">Date</label>
         <input type="date" id="journal-date" name="journal-date" />
-
-        <textarea placeholder="What helped you feel calm today? Was there a moment where you truly felt at ease? Write your thoughts..."></textarea>
-
-        <button>Save</button>
+        <textarea id="journal-text" placeholder="What helped you feel calm today? Was there a moment where you truly felt at ease? Write your thoughts..."></textarea>
+        <button id="save-journal-entry">Save</button>
       </div>
 
       <!-- Right side: Archive section -->
@@ -32,11 +37,8 @@
         <div class="archive-header">
           <h2>Archive</h2>
         </div>
-
         <div class="archive-list">
-          <div>Peaceful - 4-19-25 [7:05 AM]</div>
-          <div>Worried - 4-17-25 [10:43 AM]</div>
-          <div>Proud - 4-16-25 [6:29 PM]</div>
+          <div class="empty-archive-message">No journal entries yet.</div> <!-- Default message -->
         </div>
       </div>
     </div>

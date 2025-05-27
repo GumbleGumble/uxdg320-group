@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodshop - Home</title>
-    <!-- Pull from Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <title>MoodLog - Home</title>
     <link rel="stylesheet" href="css/Style.css">
     <link rel="icon" type="image/png" href="assets/other/favicon.png">
     <style>
@@ -76,87 +74,83 @@
       }
     </style>
 </head>
-
 <body>
- <div class="page-wrapper">
-    <header class="header-flex">
-      <div class="nav-wrapper" style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 16px;">
-        <div class="logo">
-          <a href="../index.html">
-            <img src="../../assets/other/Moodshop Logo.png" alt="MoodShop Logo" height="25" />
-          </a>
-        </div>
-      </div>
-    </header>
-    <h1 class="visually-hidden">Moodshop Home</h1>
-    <main class="main-content">
-        <div class="mood-grid">
-            <a href="html/sub-categories/Angry.html" aria-label="Go to Angry category">
-                <div class="tile" style="--tile-color: #ffb3ba;"
-                    data-definition="A strong feeling of displeasure or hostility.">
-                    <div class="icon"><img src="assets/emotions/Angry.png" alt="Angry">
-                    </div>
-                    <div class="label">Angry</div>
+    <div class="page-wrapper">
+        <header class="header-flex">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/other/logo.svg" alt="MoodLog Logo" />
+                    </a>
                 </div>
-            </a>
-            <a href="html/sub-categories/Happy.html" aria-label="Go to Happy category">
-                <div class="tile" style="--tile-color: #ffdfba;"
-                    data-definition="A feeling of joy, pleasure, or good fortune.">
-                    <div class="icon"><img src="assets/emotions/Happy.png" alt="Happy">
-                    </div>
-                    <div class="label">Happy</div>
-                </div>
-            </a>
-            <a href="html/sub-categories/Sad.html" aria-label="Go to Sad category">
-                <div class="tile" style="--tile-color: #aec6cf;" data-definition="A feeling of sorrow or unhappiness.">
-                    <div class="icon"><img src="assets/emotions/Sad.png" alt="Sad">
-                    </div>
-                    <div class="label">Sad</div>
-                </div>
-            </a>
-            <a href="html/sub-categories/Anxious.html" aria-label="Go to Anxious category">
-                <div class="tile" style="--tile-color: #fff5ba;"
-                    data-definition="Uneasy tension about potential threats or uncertainty.">
-                    <div class="icon"><img src="assets/emotions/Anxiety.png" alt="Anxious"></div>
-                    <div class="label">Anxious</div>
-                </div>
-            </a>
-            <a href="html/sub-categories/Calm.html" aria-label="Go to Calm category">
-                <div class="tile" style="--tile-color: #b5ead7;"
-                    data-definition="A peaceful and relaxed state of mind.">
-                    <div class="icon"><img src="assets/emotions/Calm.png" alt="Calm">
-                    </div>
-                    <div class="label">Calm</div>
-                </div>
-            </a>
-        </div>
-        <div class="right-panel">
-            <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
-              <img src="assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
-            </button>
-            <div class="mascot-section">
-                <div class="speech-bubble">Hey, how are you feeling today?</div>
-                <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
             </div>
-            <div class="definition-box" id="definition-box">
-                <strong>Definition</strong>
-                <p id="definition-text">Hover over an emotion to see definition</p>
+        </header>
+        <main class="main-content">
+            <div class="mood-grid">
+                <a href="html/sub-categories/Angry.html" aria-label="Go to Angry category">
+                    <div class="tile" style="--tile-color: #ffb3ba;"
+                        data-definition="A strong feeling of displeasure or hostility.">
+                        <div class="icon"><img src="assets/emotions/Angry.png" alt="Angry">
+                        </div>
+                        <div class="label">Angry</div>
+                    </div>
+                </a>
+                <a href="html/sub-categories/Happy.html" aria-label="Go to Happy category">
+                    <div class="tile" style="--tile-color: #ffdfba;"
+                        data-definition="A feeling of joy, pleasure, or good fortune.">
+                        <div class="icon"><img src="assets/emotions/Happy.png" alt="Happy">
+                        </div>
+                        <div class="label">Happy</div>
+                    </div>
+                </a>
+                <a href="html/sub-categories/Sad.html" aria-label="Go to Sad category">
+                    <div class="tile" style="--tile-color: #aec6cf;"
+                        data-definition="A feeling of sorrow or unhappiness.">
+                        <div class="icon"><img src="assets/emotions/Sad.png" alt="Sad">
+                        </div>
+                        <div class="label">Sad</div>
+                    </div>
+                </a>
+                <a href="html/sub-categories/Anxious.html" aria-label="Go to Anxious category">
+                    <div class="tile" style="--tile-color: #fff5ba;"
+                        data-definition="Uneasy tension about potential threats or uncertainty.">
+                        <div class="icon"><img src="assets/emotions/Anxiety.png" alt="Anxious"></div>
+                        <div class="label">Anxious</div>
+                    </div>
+                </a>
+                <a href="html/sub-categories/Calm.html" aria-label="Go to Calm category">
+                    <div class="tile" style="--tile-color: #b5ead7;"
+                        data-definition="A peaceful and relaxed state of mind.">
+                        <div class="icon"><img src="assets/emotions/Calm.png" alt="Calm">
+                        </div>
+                        <div class="label">Calm</div>
+                    </div>
+                </a>
             </div>
-        </div>
-    </main>
- </div>
-    
+            <div class="right-panel">
+                <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
+                    <img src="assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+                </button>
+                <div class="mascot-section">
+                    <div class="speech-bubble">Hey, how are you feeling today?</div>
+                    <img src="assets/other/presenter.png" alt="Mascot" class="mascot-image" />
+                </div>
+                <div class="definition-box" id="definition-box">
+                    <strong>Definition</strong>
+                    <p id="definition-text">Hover over an emotion to see definition</p>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/hover-script.js"></script>
     <script>
         function togglePresenter() {
-          const mascot = document.querySelector('.mascot-section');
-          const btn = document.getElementById('toggleBtn');
-          mascot.classList.toggle('hidden');
-          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
+            const mascot = document.querySelector('.mascot-section');
+            const btn = document.getElementById('toggleBtn');
+            mascot.classList.toggle('hidden');
+            btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
         }
-      </script>
-
+    </script>
 </body>
-
 </html>
