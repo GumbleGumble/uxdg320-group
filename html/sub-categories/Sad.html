@@ -25,40 +25,52 @@
                         flex-direction: column;
                         align-items: center;
                         padding: 20px;
-                        gap: 40px;
+                        gap: 20px;
                       }
-                
+
+                      .right-panel {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        order: 1;
+                        width: 100%;
+                      }
+
+                      .speech-bubble {
+                        order: 1;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        text-align: center;
+                      }
+
+                      .definition-box {
+                        order: 2;
+                        width: 90%;
+                        font-size: 14px;
+                        text-align: center;
+                      }
+
+                      .mascot-section {
+                        order: 3;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                      }
+
                       .mood-grid {
-                        grid-template-columns: 1fr;
-                        grid-template-areas:
-                          "disappointed"
-                          "lonely"
-                          "sad";
-                        margin-left: 0;
-                        justify-items: center;
+                        order: 4;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 16px;
+                        width: 100%;
                       }
-                
+
                       .tile {
                         width: 90%;
                       }
-                
-                      .right-panel {
-                        align-items: center;
-                        margin-top: 30px;
-                      }
-                
-                      .speech-bubble {
-                        transform: none;
-                        text-align: center;
-                      }
-                
-                      .definition-box {
-                        left: 0;
-                        max-width: 90%;
-                        text-align: center;
-                      }
                     }
-                    </style>
+                </style>
           </header>
     <div class="main-content">
         <div class="mood-grid">
