@@ -1,6 +1,6 @@
-# 😊 UXDG320 Final Project – *MoodShop*
+# 😊 UXDG320 Final Project – *MoodLog*
 
-This is the final project for UXDG320 – an interactive mood-tracking and journaling web app called **MoodShop**. Users can explore their emotions, get supportive prompts, and reflect through journaling. The experience is divided into three main modules: Home Page, Mood Booth, and Mood Journal.
+This is the final project for UXDG320 – an interactive mood-tracking and journaling web app called **MoodLog**. Users can explore their emotions, get supportive prompts, and reflect through journaling. The experience is divided into three main modules: Home Page, Mood Booth, and Mood Journal.
 
 ---
 
@@ -48,7 +48,7 @@ UXDG320-FinalProject/
 
 - HTML5 & CSS3 (Flexbox & Media Queries)
 - JavaScript (vanilla)
-- LocalStorage API (for journal saving)
+- localStorage & sessionStorage (for journal saving & emotion selection persistance)
 - Google Fonts: Inter
 - Figma → Code Design Mapping
 
@@ -85,5 +85,5 @@ To run locally:
 
 ## 🙌 Team & Credit
 
-Developed by Jamie Chou and contributors  
+Developed by Jamie Chou and Chase Engelmann  
 Course: UXDG320 @ SCAD | Spring 2025

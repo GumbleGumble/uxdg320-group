@@ -22,6 +22,7 @@ function setupEmotionSelection() {
         name: this.querySelector(".label").textContent,
         definition: this.getAttribute("data-definition"),
         imageSrc: this.querySelector("img").src,
+        alt: this.getAttribute("data-alt") || this.querySelector("img").alt || this.querySelector(".label").textContent, // Store alt text from data-alt
         dialog: this.getAttribute("data-dialog") || `How does feeling this feeling affect you?`,
         journalPrompt: this.getAttribute("data-journal-prompt") || `How does feeling this feeling affect you?`
       };
@@ -46,8 +47,7 @@ function displaySelectedEmotion() {
   const emotionImg = document.getElementById("emotion-img");
   if (emotionImg) {
     emotionImg.src = emotionData.imageSrc;
-    emotionImg.alt = emotionData.name; // Uses emotion name as alt text
-    // TODO: This is very lazy alt text, need to come up more descriptive system or manually write alt text for each emotion
+    emotionImg.alt = emotionData.alt || emotionData.name; // Use descriptive alt text from data-alt if present
   }
   document.title = `MoodShop - ${emotionData.name}`; // Update page title
 }

@@ -195,7 +195,7 @@ a {
 }
 
 #toggleBtn:hover {
-  background-color: #444;
+  background-color: #cecece;
   transform: scale(1.05);
 }
 
