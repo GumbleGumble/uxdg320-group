@@ -1,5 +1,6 @@
 # 😊 UXDG320 Final Project – *MoodShop*
 
+<<<<<<< HEAD
 This is the final project for UXDG320 – an interactive mood-tracking and journaling web app called **MoodShop**. Users can explore their emotions, get supportive prompts, and reflect through journaling. The experience is divided into three main modules: Home Page, Mood Booth, and Mood Journal.
 
 ---
@@ -8,6 +9,21 @@ This is the final project for UXDG320 – an interactive mood-tracking and journ
 
 ```
 UXDG320-FinalProject/
+=======
+MoodLog is a web-based interactive prototype that helps users identify and reflect on their emotions through visual cards and light journaling.
+
+ 🎯 Features
+	•	🌈 Emotion Selection: Choose from moods like Angry, Sad, Happy, Calm, and Anxious
+	•	💬 Contextual Prompts: Speech bubble provides supportive reflection questions
+	•	🧠 Definitions: Hover-based definitions to help understand emotions
+	•	👁️ Presenter: Optional character offering guidance (toggleable via eye icon)
+	•	📓 Mood Journal: Users can write and archive daily reflections
+	•	📱 Responsive Design: Optimized layout across devices
+
+## Folder Structure
+UXDG320-FinalProject/
+UXDG320-FinalProject/
+>>>>>>> e4878b2df988706921371d0a49c811afc9f80566
 ├── assets/
 │   ├── emotions/             # All emotion icons (e.g., Happy.png, Sad.png)
 │   └── other/                # Logo, eye icon, presenter, backgrounds, etc.
@@ -29,6 +45,7 @@ UXDG320-FinalProject/
 │   └── storage-logic.js      # Local storage save/load logic for journal
 ├── index.html                # Entry point for the MoodShop app
 └── README.md
+<<<<<<< HEAD
 ```
 
 ---
@@ -86,4 +103,35 @@ To run locally:
 ## 🙌 Team & Credit
 
 Developed by Jamie Chou and contributors  
+=======
+⚙️ Technologies Used
+	•	HTML5 & CSS3 (Flexbox & Media Queries)
+	•	JavaScript (vanilla)
+	•	LocalStorage API (for journal saving)
+	•	Google Fonts: Inter
+	•	Figma → Code Design Mapping
+
+🚀 Getting Started
+To run locally:
+	1.	Clone or download the repository
+	2.	Open index.html in your browser
+	3.	Explore Mood Booth and log your journal via:
+	•	html/sub-categories/ → Select a mood
+	•	journal.html → Record your thoughts
+
+ 🧪 Accessibility & UX
+	•	All emotion images include descriptive alt text
+	•	Keyboard-accessible buttons and links
+	•	Proper semantic HTML
+	•	Toggle presenter for sensory control
+
+ 📌 Notes
+	•	The journal saves entries in localStorage per emotion category
+	•	Eye toggle feature allows users to hide/show the presenter for a calmer experience
+	•	Mobile layout stacks presenter + definition above the emotion card and journal button
+
+ 🙌 Team & Credit
+
+Developed by Jamie Zhou and Chase Engelmann
+>>>>>>> e4878b2df988706921371d0a49c811afc9f80566
 Course: UXDG320 @ SCAD | Spring 2025
