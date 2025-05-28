@@ -1,4 +1,4 @@
- 😊 MoodShop
+ 😊 MoodLog
 
 MoodShop is a web-based interactive prototype that helps users identify and reflect on their emotions through visual cards and light journaling.
 
