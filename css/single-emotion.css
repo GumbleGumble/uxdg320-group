@@ -134,3 +134,70 @@ html, body {
   .mascot-image {
     width: 100%;
   }
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .presenter-section {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fefefe;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    gap: 12px;
+    width: 90%;
+    max-width: 480px;
+  }
+
+  .speech-bubble {
+    order: -2;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .speech-bubble::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .mascot-box {
+    width: 160px;
+    margin: 0 auto;
+    order: -1;
+  }
+
+  .definition-box {
+    order: 0;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .emotion-section {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 90%;
+    max-width: 480px;
+  }
+
+  .emotion-content {
+    display: contents;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}

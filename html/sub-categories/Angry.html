@@ -16,7 +16,7 @@
         <header class="header-flex">
             <div class="nav-wrapper" style="display: flex; align-items: center; gap: 12px; padding: 16px;">
                 <a href="javascript:history.back()" class="arrow-left">
-                  <img src="../../assets/other/arrow-left.svg" alt="Back" width="15" height="15" />
+                  <img src="../../assets/other/arrow-left.svg" alt="Back" width="20" height="20" />
                 </a>
                 
                 <style>
@@ -103,7 +103,7 @@
         </div>
         <div class="right-panel">
             <button onclick="togglePresenter()" aria-pressed="false" id="toggleBtn" aria-label="Toggle Presenter">
-                <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24">
+                    <img src="../../assets/other/eye.svg" alt="Toggle Presenter Icon" width="24" height="24" alt="Eye Icon" id="eyeIcon">
               </button>
             <div class="mascot-section">
                 <div class="speech-bubble">Let's try to get a little bit more specific</div>
@@ -119,13 +119,17 @@
     <script src="../../js/hover-script.js"></script>
     <script src="../../js/storage-logic.js"></script>
     <script>
-        function togglePresenter() {
-          const mascot = document.querySelector('.mascot-section');
-          const btn = document.getElementById('toggleBtn');
-          mascot.classList.toggle('hidden');
-          btn.setAttribute('aria-pressed', !mascot.classList.contains('hidden'));
-        }
-      </script>
+     const eyeBtn = document.getElementById('toggleBtn');
+      const eyeIcon = document.getElementById('eyeIcon');
+      let isOpen = true;
+      eyeBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      eyeIcon.src = isOpen ? '../../assets/other/eye.svg' : '../../assets/other/eye-slash.svg';
+      // toggle the visibility of the mascot
+       const mascot = document.querySelector('.mascot-section');
+       if (mascot) mascot.style.display = isOpen ? 'block' : 'none';
+      });
+     </script>
 </body>
 
 </html>
