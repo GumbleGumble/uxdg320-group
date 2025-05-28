@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodshop - Sad</title>
+    <title>MoodLog - Sad</title>
     <!-- Pull from Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/Style.css">
@@ -25,53 +24,40 @@
                         flex-direction: column;
                         align-items: center;
                         padding: 20px;
-                        gap: 20px;
+                        gap: 40px;
                       }
-
-                      .right-panel {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        order: 1;
-                        width: 100%;
-                      }
-
-                      .speech-bubble {
-                        order: 0;
-                        margin-bottom: 10px;
-                        font-size: 14px;
-                        text-align: center;
-                      }
-                      .mascot-section {
-                        order: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                      }
-
-                      .definition-box {
-                        order: 2;
-                        width: 90%;
-                        font-size: 14px;
-                        text-align: center;
-                      }
-
+                
                       .mood-grid {
-                        order: 4;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 16px;
-                        width: 100%;
+                        grid-template-columns: 1fr;
+                        grid-template-areas:
+                          "disappointed"
+                          "lonely"
+                          "sad";
+                        margin-left: 0;
+                        justify-items: center;
                       }
-
+                
                       .tile {
-                        width: 100vpx;
-                        max-width: 4800px;
-                        margin: 0 auto;
+                        width: 90%;
+                      }
+                
+                      .right-panel {
+                        align-items: center;
+                        margin-top: 30px;
+                      }
+                
+                      .speech-bubble {
+                        transform: none;
+                        text-align: center;
+                      }
+                
+                      .definition-box {
+                        left: 0;
+                        max-width: 90%;
+                        text-align: center;
                       }
                     }
-                </style>
+                    </style>
           </header>
     <div class="main-content">
         <div class="mood-grid">
