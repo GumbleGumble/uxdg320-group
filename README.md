@@ -1,52 +1,89 @@
- 😊 MoodLog
+# 😊 UXDG320 Final Project – *MoodShop*
 
-MoodShop is a web-based interactive prototype that helps users identify and reflect on their emotions through visual cards and light journaling.
+This is the final project for UXDG320 – an interactive mood-tracking and journaling web app called **MoodShop**. Users can explore their emotions, get supportive prompts, and reflect through journaling. The experience is divided into three main modules: Home Page, Mood Booth, and Mood Journal.
 
- **Current Features:**
+---
 
-  - Mood Selection Home Page
-  - Users can select from 5 primary emotions: Angry, Happy, Sad, Anxious, and Calm.
-  - Each mood card links to a dedicated Mood Booth page.
-  
- **Emotion Definition Panel**
-  - Hover or select a mood to reveal a brief definition on the right panel.
+## 📁 Project Structure
 
- **Mascot Interaction**
-  - A friendly visual guide offers prompts to support users’ self-awareness.
-
- **Page Navigation**
-  - All mood cards are linked to their corresponding detail pages.
-  - MoodShop logo navigates back to the Home Page for smooth interaction.
-
-## Folder Structure
+```
 UXDG320-FinalProject/
-├── Home Page/
-│   ├── assets/             
-│   ├── Home.html           
-│   ├── Style.css
-│   └── script.js
-├── Mood Booth/
-│   ├── assets/
-│   ├── Angry.html
-│   ├── Happy.html
-│   ├── Sad.html
-│   ├── Calm.html
-│   ├── Anxious.html
-│   └── Style.css
-├── Mood Journal/
-│   ├── assets/
-│   ├── Angry.html
-│   ├── Happy.html
-│   ├── Sad.html
-│   ├── Calm.html
-│   ├── Anxious.html
-│   ├── style.css
-│   ├── script.js
-│   └── styles.css
+├── assets/
+│   ├── emotions/             # All emotion icons (e.g., Happy.png, Sad.png)
+│   └── other/                # Logo, eye icon, presenter, backgrounds, etc.
+├── css/
+│   ├── Journal.css           # Styles for the journaling experience
+│   ├── single-emotion.css    # Styles for individual emotion pages
+│   └── Style.css             # Shared or landing page styling
+├── html/
+│   ├── journal.html          # Main journaling interface
+│   ├── single-emotion.html   # Template for viewing selected emotions
+│   └── sub-categories/
+│       ├── Angry.html
+│       ├── Happy.html
+│       ├── Sad.html
+│       ├── Calm.html
+│       └── Anxious.html
+├── js/
+│   ├── hover-script.js       # Script for hover definition prompts
+│   └── storage-logic.js      # Local storage save/load logic for journal
+├── index.html                # Entry point for the MoodShop app
+└── README.md
+```
 
-## 📌 To Do (Next Steps)
+---
 
-- Implement journal entry functionality
-- Add localStorage to save reflections
-- Complete Mood Booth subpages for all emotions
-- Polish interactions using animation (Anime.js)
+## 🎯 Features
+
+- 🌈 Emotion Selection: Choose from moods like Angry, Sad, Happy, Calm, and Anxious
+- 💬 Contextual Prompts: Speech bubble provides supportive reflection questions
+- 🧠 Definitions: Hover-based definitions to help understand emotions
+- 👁️ Presenter: Optional character offering guidance (toggleable via eye icon)
+- 📓 Mood Journal: Users can write and archive daily reflections
+- 📱 Responsive Design: Optimized layout across devices
+
+---
+
+## ⚙️ Technologies Used
+
+- HTML5 & CSS3 (Flexbox & Media Queries)
+- JavaScript (vanilla)
+- LocalStorage API (for journal saving)
+- Google Fonts: Inter
+- Figma → Code Design Mapping
+
+---
+
+## 🚀 Getting Started
+
+To run locally:
+
+1. Clone or download the repository
+2. Open `index.html` in your browser
+3. Explore Mood Booth and log your journal via:
+   - `html/sub-categories/` → Select a mood
+   - `journal.html` → Record your thoughts
+
+---
+
+## 🧪 Accessibility & UX
+
+- All emotion images include descriptive `alt` text
+- Keyboard-accessible buttons and links
+- Proper semantic HTML
+- Toggle presenter for sensory control
+
+---
+
+## 📌 Notes
+
+- The journal saves entries in `localStorage` per emotion category
+- Eye toggle feature allows users to hide/show the presenter for a calmer experience
+- Mobile layout stacks presenter + definition above the emotion card and journal button
+
+---
+
+## 🙌 Team & Credit
+
+Developed by Jamie Chou and contributors  
+Course: UXDG320 @ SCAD | Spring 2025
